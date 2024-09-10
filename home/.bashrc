@@ -114,3 +114,5 @@ fi
 
 export PATH=~/.guix-home/profile/bin:~/.guix-profile/bin:~/go/bin:$PATH
 export LC_COLLATE=C
+GUIX_PROFILE=~/.config/guix/current
+. $GUIX_PROFILE/etc/profile

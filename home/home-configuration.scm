@@ -28,6 +28,7 @@
                                             "ripgrep"
                                             "fd"
                                             "git"
+                                            "tig"
                                             "htop")))
 
   ;; Below is the list of Home services.  To search for available
