@@ -13,20 +13,20 @@
 (home-environment
   ;; Below is the list of packages that will show up in your
   ;; Home profile, under ~/.guix-home/profile.
-  (packages (specifications->packages (list "age-keygen"
+  (packages (specifications->packages (list "yq"
+					    "neofetch"
+                                            "aria2"
+                                            "nyxt"
+                                            "age-keygen"
                                             "age"
                                             "mpv"
                                             "tree"
                                             "rlwrap"
                                             "recutils"
-                                            "nats-server"
                                             "emacs"
-                                            "yq"
-                                            "du-dust"
                                             "zoxide"
                                             "ripgrep"
                                             "fd"
-                                            "tig"
                                             "git"
                                             "htop")))
 
@@ -35,14 +35,17 @@
   (services
    (list (service home-bash-service-type
                   (home-bash-configuration
-                   (aliases '(("alert" . "notify-send --urgency=low -i \"$([ $? = 0 ] && echo terminal || echo error)\" \"$(history|tail -n1|sed -e '\\''s/^\\s*[0-9]\\+\\s*//;s/[;&|]\\s*alert$//'\\'')\"")
+                   (aliases '(
                               ("egrep" . "egrep --color=auto")
                               ("fgrep" . "fgrep --color=auto")
                               ("grep" . "grep --color=auto")
+                              ("ip" . "ip -color=auto")
                               ("l" . "ls -CF")
                               ("la" . "ls -A")
                               ("ll" . "ls -alF")
                               ("ls" . "ls --color=auto")))
-                   (bashrc (list (local-file "./.bashrc" "bashrc")))
-                   (bash-logout (list (local-file "./.bash_logout"
+                   (bashrc (list (local-file ".bashrc" "bashrc")))
+                   (bash-profile (list (local-file ".bash_profile"
+                                                   "bash_profile")))
+                   (bash-logout (list (local-file ".bash_logout"
                                                   "bash_logout"))))))))
