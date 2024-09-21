@@ -1,0 +1,40 @@
+* guix configuration
+
+** Scope
+
+- Custom packages
+- Home configuration
+- System configuration(s)
+
+** Roadmap [0/4]
+
+*** TODO Example packages [0/2]
+
+**** TODO Simple binary using =copy-build-system=
+**** TODO Go package with =go.mod= deps
+
+See:
+- https://www.reddit.com/r/GUIX/comments/13it1w9/comment/jkjxj8b/
+- https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/blob/main/packages/baulig/multi-fetch.scm
+
+*** TODO System
+**** TODO Channels
+**** TODO System
+**** TODO Home [0/2]
+
+***** TODO Packages
+
+***** TODO Files
+
+***** TODO Users
+
+*** TODO Custom channel
+
+*** TODO Guile scheme LSP package
+
+See [[https://codeberg.org/rgherdt/scheme-lsp-server][scheme-lsp-server]]
+
+** References
+
+- [[https://gitlab.com/martin-baulig/config-and-setup/guix-packages/][Martin Baulig / Config and Setup / Guix Packages]]
+  - See [[https://gitlab.com/martin-baulig/config-and-setup/guix-packages/-/tree/main/system/edoras][edoras system config]] (channels / config / home)
